@@ -79,8 +79,7 @@ patch -p01 < "$BUILDROOT/quiche/extras/nginx/nginx-1.16.patch"
 	--with-ld-opt="-Wl,-Bsymbolic-functions -Wl,-z,relro -L $BUILDROOT/boringssl/.openssl/lib/" \
 
 # build nginx
-#make -j"$core_count"
-make
+make -j"$core_count"
 make install
 
 # copy the nginx binary to the host volume
