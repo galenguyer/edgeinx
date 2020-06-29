@@ -1,0 +1,10 @@
+8f5d387fe7c2a50247a1d108e84ef138  usr/sbin/nginx
+cbd0fe7ed116af80a5a81b570559146e  etc/nginx/conf/mime.types
+bfa0b80381fed2b1dfcf617b0ba204ec  etc/nginx/conf/koi-win
+3749ffe19bedd842eb87e83d544e5ce6  etc/nginx/conf/win-utf
+3e338aca6a53a5420fc791b5ef86f64c  etc/nginx/conf/koi-utf
+88ac833ee8ea60904a8b3063fde791de  etc/nginx/conf/uwsgi_params
+3a0b1f2d0a5734fe3200a48703bafed2  etc/nginx/conf/nginx.conf
+df8c71e25e0356ffc539742f08fddfff  etc/nginx/conf/scgi_params
+178a634a52a0777a4cf6f3a394fd2b53  etc/nginx/conf/fastcgi.conf
+4729c30112ca3071f4650479707993ad  etc/nginx/conf/fastcgi_params

@@ -1,0 +1,9 @@
+#!/bin/sh
+# Set up the log location with proper permissions
+mkdir -p /var/log/nginx
+chown www-data:www-data /var/log/nginx
+
+# Set up a path for it to do things with
+# (stuff breaks without this)
+mkdir -p /usr/share/nginx
+chown www-data:www-data /usr/share/nginx

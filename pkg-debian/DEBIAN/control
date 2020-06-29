@@ -1,0 +1,11 @@
+Package: edgeinx-mainline
+Version: 0.1.0
+Architecture: amd64
+Conflicts: nginx
+Provides: nginx
+Essential: no
+Section: web
+Priority: optional
+Maintainer: Galen Guyer <galen@galenguyer.com>
+Installed-Size: 96
+Description: Statically linked NGINX binary
