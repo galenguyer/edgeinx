@@ -7,3 +7,38 @@ chown www-data:www-data /var/log/nginx
 # (stuff breaks without this)
 mkdir -p /usr/share/nginx
 chown www-data:www-data /usr/share/nginx
+
+# write default configs
+test -d '/etc/nginx' || mkdir -p /etc/nginx
+
+cp "/tmp/nginx/koi-win" '/etc/nginx'
+cp "/tmp/nginx/koi-utf" '/etc/nginx'
+cp "/tmp/nginx/win-utf" '/etc/nginx'
+
+test -f '/etc/nginx/mime.types' \
+        || cp /tmp/nginx/mime.types '/etc/nginx'
+cp /tmp/nginx/mime.types '/etc/nginx/mime.types.default'
+
+test -f '/etc/nginx/fastcgi_params' \
+        || cp /tmp/nginx/fastcgi_params '/etc/nginx'
+cp /tmp/nginx/fastcgi_params \
+        '/etc/nginx/fastcgi_params.default'
+
+test -f '/etc/nginx/fastcgi.conf' \
+        || cp /tmp/nginx/fastcgi.conf '/etc/nginx'
+cp /tmp/nginx/fastcgi.conf '/etc/nginx/fastcgi.conf.default'
+
+test -f '/etc/nginx/uwsgi_params' \
+        || cp /tmp/nginx/uwsgi_params '/etc/nginx'
+cp /tmp/nginx/uwsgi_params \
+        '/etc/nginx/uwsgi_params.default'
+
+test -f '/etc/nginx/scgi_params' \
+        || cp /tmp/nginx/scgi_params '/etc/nginx'
+cp /tmp/nginx/scgi_params \
+        '/etc/nginx/scgi_params.default'
+
+test -f '/etc/nginx/nginx.conf' \
+        || cp /tmp/nginx/nginx.conf '/etc/nginx/nginx.conf'
+cp /tmp/nginx/nginx.conf '/etc/nginx/nginx.conf.default'
+

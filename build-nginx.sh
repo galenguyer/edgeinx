@@ -12,7 +12,7 @@ MAINLINE="1.19.0"
 STABLE="1.18.0"
 
 # set package version
-PKGVER="0.6.0"
+PKGVER="0.7.0"
 PKGBUILD="$(pwd)/build"
 
 # choose where to put the build files
@@ -117,7 +117,7 @@ cd "$PKGBUILD"
 if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
-cd ..
-if [ -d "$BUILDROOT/artifacts" ]; then
-	rm -r "$BUILDROOT/artifacts"
-fi
+#cd ..
+#if [ -d "$BUILDROOT/artifacts" ]; then
+#	rm -r "$BUILDROOT/artifacts"
+#fi
