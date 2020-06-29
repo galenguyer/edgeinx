@@ -51,8 +51,6 @@ patch -p01 < "$BUILDROOT/quiche/extras/nginx/nginx-1.16.patch"
 	--http-log-path=/var/log/nginx/access.log \
 	--pid-path=/run/nginx.pid \
 	--lock-path=/run/lock/subsys/nginx \
-	--http-client-body-temp-path=/tmp/nginx/client \
-        --http-proxy-temp-path=/tmp/nginx/proxy \
 	--user=www-data \
 	--group=www-data \
 	--with-threads \
