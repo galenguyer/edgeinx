@@ -1,5 +1,5 @@
-Package: edgeinx-mainline
-Version: 0.1.0
+Package: {{PACKAGE}}
+Version: {{VERSION}}
 Architecture: amd64
 Conflicts: nginx
 Provides: nginx
