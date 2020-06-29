@@ -43,6 +43,7 @@ if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
 cp ../pkg-debian ./ -r
+mkdir -p "$PKGBUILD"/pkg-debian/usr/sbin
 cp ../artifacts/nginx-"$STABLE" "$PKGBUILD"/pkg-debian/usr/sbin/nginx
 cd ./pkg-debian
 find . -type f | grep -v 'debian-binary' | grep -v 'DEBIAN' | xargs md5sum > ./DEBIAN/md5sums
@@ -57,6 +58,7 @@ if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
 cp ../pkg-debian ./ -r
+mkdir -p "$PKGBUILD"/pkg-debian/usr/sbin
 cp ../artifacts/nginx-"$MAINLINE" "$PKGBUILD"/pkg-debian/usr/sbin/nginx
 cd ./pkg-debian
 find . -type f | grep -v 'debian-binary' | grep -v 'DEBIAN' | xargs md5sum > ./DEBIAN/md5sums
@@ -71,6 +73,7 @@ if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
 cp ../pkg-debian ./ -r
+mkdir -p "$PKGBUILD"/pkg-debian/usr/sbin
 cp ../artifacts/nginx-"1.16.1"-quiche "$PKGBUILD"/pkg-debian/usr/sbin/nginx
 cd ./pkg-debian
 find . -type f | grep -v 'debian-binary' | grep -v 'DEBIAN' | xargs md5sum > ./DEBIAN/md5sums
@@ -85,6 +88,7 @@ if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
 cp ../pkg-debian ./ -r
+mkdir -p "$PKGBUILD"/pkg-debian/usr/sbin
 cp ../artifacts/nginx-"$STABLE"-quiche "$PKGBUILD"/pkg-debian/usr/sbin/nginx
 cd ./pkg-debian
 find . -type f | grep -v 'debian-binary' | grep -v 'DEBIAN' | xargs md5sum > ./DEBIAN/md5sums
@@ -99,6 +103,7 @@ if [ -d "$PKGBUILD"/pkg-debian ]; then
 	rm -r "$PKGBUILD"/pkg-debian
 fi
 cp ../pkg-debian ./ -r
+mkdir -p "$PKGBUILD"/pkg-debian/usr/sbin
 cp ../artifacts/nginx-"$MAINLINE"-quiche "$PKGBUILD"/pkg-debian/usr/sbin/nginx
 cd ./pkg-debian
 find . -type f | grep -v 'debian-binary' | grep -v 'DEBIAN' | xargs md5sum > ./DEBIAN/md5sums
