@@ -12,7 +12,7 @@ MAINLINE="1.19.0"
 STABLE="1.18.0"
 
 # set package version
-PKGVER="0.2.0"
+PKGVER="0.5.0"
 PKGBUILD="$(pwd)/build"
 
 # choose where to put the build files

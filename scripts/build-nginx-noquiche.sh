@@ -40,6 +40,13 @@ cd openssl
 # build openssl
 make -j"$core_count"
 
+# fetch the zlib library
+ZLIB="1.2.11"
+mkdir -p "$BUILDROOT/zlib"
+cd "$BUILDROOT/zlib"
+curl -L -O "https://www.zlib.net/zlib-$ZLIB.tar.gz"
+tar xzf "$BUILDROOT/zlib/zlib-$ZLIB.tar.gz"
+
 # fetch the pcre library
 PCRE="8.44"
 mkdir -p "$BUILDROOT/pcre"
@@ -73,18 +80,19 @@ git clone https://github.com/aperezdc/ngx-fancyindex.git "$BUILDROOT"/ngx-fancyi
 	--with-file-aio \
 	--with-pcre="$BUILDROOT/pcre/pcre-$PCRE" \
 	--with-pcre-jit \
+	--with-zlib="$BUILDROOT/zlib/zlib-$ZLIB" \
+	--with-http_gunzip_module \
+	--with-http_gzip_static_module \
 	--with-http_addition_module \
-	--without-http_fastcgi_module \
-	--without-http_uwsgi_module \
-	--without-http_scgi_module \
-	--without-http_gzip_module \
 	--without-select_module \
 	--without-poll_module \
 	--without-mail_pop3_module \
 	--without-mail_imap_module \
 	--without-mail_smtp_module \
 	--with-openssl="$BUILDROOT/openssl" \
-	--with-cc-opt="-g -O3 -march=native -fPIE -fstack-protector-all -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -I $BUILDROOT/openssl" \
+	--with-http_ssl_module \
+	--with-http_v2_module \
+	--with-cc-opt="-Wl,--gc-sections -static -static-libgcc -g -O2 -ffunction-sections -fdata-sections -fPIE -fstack-protector-all -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security" \
 	--with-ld-opt="-Wl,-Bsymbolic-functions -Wl,-z,relro -L $BUILDROOT/openssl/"
 
 # build nginx
