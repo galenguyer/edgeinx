@@ -8,11 +8,11 @@ set -o errexit
 set -o nounset
 
 # set the nginx version we wish to build
-MAINLINE="1.19.2"
+MAINLINE="1.19.3"
 STABLE="1.18.0"
 
 # set package version
-PKGVER="1.3.0"
+PKGVER="1.4.0"
 PKGBUILD="$(pwd)/build"
 
 # choose where to put the build files

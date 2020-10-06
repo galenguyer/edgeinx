@@ -13,7 +13,7 @@ export GPG_TTY=$(tty)
 # GPG key to use for signing
 GPGKEY="038CCBF3DAD6946AF5ECC4F9B00B5AAA0E096100"
 # path to repo
-REPOPATH="/data/nginx/packages.galenguyer.com/debian"
+REPOPATH="/var/www/packages.galenguyer.com/debian"
 
 if [ ! -d "$REPOPATH" ]; then
 	echo "No repo folder, exiting"
